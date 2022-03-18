@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>shop</title>
+</head>
+<body>
+	<table border="1">
+		<tr style="font-weight: bold">
+			<td>순번</td>
+			<td>고객아이디</td>
+			<td>고객명</td>
+			<td>고객등급</td>
+			<td>제품코드</td>
+			<td>주문수량</td>
+			<td>주문주소</td>
+			<td>주문일자</td>
+		</tr>
+		<tr th:each="np : ${list}">
+			<td th:text="${np.id}"></td>
+			<td th:text="${np.customer.Id}"></td>
+			<td th:text="${np.customer.name}"></td>
+			<td th:text="${np.customer.grade}"></td>
+			<td th:text="${np.name}"></td>
+			<td th:text="${np.count}"></td>
+			<td th:text="${np.dest}"></td>
+			<td th:text="${np.ordDate}"></td>
+		</tr>
+	</table>
+
+
+</body>
+</html>
