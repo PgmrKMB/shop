@@ -20,7 +20,7 @@ public class Order {
 	@GeneratedValue
 	Integer id;
 	
-	@ManyToOne	//현재 테이블의 컬럼명		    FK테이블의 PK 컬럼명
+	@ManyToOne	//현재테이블(Order)의 컬럼명		    FK테이블의 PK 컬럼명
 	@JoinColumn(name = "customerId", referencedColumnName = "id") 
 	Customer customer; 
 	
